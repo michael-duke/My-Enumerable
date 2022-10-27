@@ -16,29 +16,29 @@ end
 
 # Create a list
 nums = MyList.new(1, 2, 3, 4)
-p nums.list
+p nums.list # => [1,2,3,4]
 
+# Test #each method
 nums.each { |num| puts num }
-
 # 1
 # 2
 # 3
 # 4
 
 # Test #all? method
-nums.all? { |e| e < 5 }
-nums.all? { |e| e > 5 }
+nums.all? { |e| e < 5 } # => true
+nums.all? { |e| e > 5 } # => false
 
 # Test #any? method
-nums.any? { |e| e == 2 }
-nums.any? { |e| e == 5 }
+nums.any? { |e| e == 2 } # => true
+nums.any? { |e| e == 5 } # => false
 
 # Test #filter method
-nums.filter(&:odd?)
-nums.filter(&:even?)
+nums.filter(&:odd?) # => [1,3]
+nums.filter(&:even?) # => [2,4]
 
 # Test #max method
-nums.max
+nums.max # => 4
 
 # Test #min method
-nums.min
+nums.min # => 1
