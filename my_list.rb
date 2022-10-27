@@ -30,3 +30,7 @@ nums.each {|num| puts num}
 # Test #all? method
 nums.all? { |e| e < 5 }
 nums.all? { |e| e > 5 }
+
+# Test #any? method
+nums.any? { |e| e == 2 }
+nums.any? { |e| e == 5 }
