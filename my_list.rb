@@ -1,4 +1,7 @@
+require_relative './my_enumerable'
+
 class MyList
+  include MyEnumerable
 
   def initialize(*list)
     @list = list
@@ -22,3 +25,8 @@ nums.each {|num| puts num}
 # 2
 # 3
 # 4
+
+
+# Test #all? method
+nums.all? { |e| e < 5 }
+nums.all? { |e| e > 5 }
