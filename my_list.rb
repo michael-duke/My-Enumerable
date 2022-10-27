@@ -34,3 +34,10 @@ nums.all? { |e| e > 5 }
 # Test #any? method
 nums.any? { |e| e == 2 }
 nums.any? { |e| e == 5 }
+
+# Test #filter method
+nums.filter { |e| e.odd?}
+nums.filter { |e| e.even?}
+
+# Test #max method
+nums.max
