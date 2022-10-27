@@ -12,20 +12,18 @@ class MyList
   def each
     yield @list
   end
-
 end
 
 # Create a list
 nums = MyList.new(1, 2, 3, 4)
 p nums.list
 
-nums.each {|num| puts num}
+nums.each { |num| puts num }
 
 # 1
 # 2
 # 3
 # 4
-
 
 # Test #all? method
 nums.all? { |e| e < 5 }
@@ -36,8 +34,11 @@ nums.any? { |e| e == 2 }
 nums.any? { |e| e == 5 }
 
 # Test #filter method
-nums.filter { |e| e.odd?}
-nums.filter { |e| e.even?}
+nums.filter(&:odd?)
+nums.filter(&:even?)
 
 # Test #max method
 nums.max
+
+# Test #min method
+nums.min
